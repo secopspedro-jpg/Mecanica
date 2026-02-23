@@ -573,52 +573,27 @@
     }
 
 
-
-
-   /* Menu responsivo - não desce, vira scroll horizontal */
-@media (max-width: 992px) {
-  .nav {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    white-space: nowrap !important;
-    -webkit-overflow-scrolling: touch;
-    max-width: calc(100vw - 150px);
-    padding-bottom: 5px;
-  }
-  
-  .nav-item {
-    display: inline-block !important;
-    float: none;
-  }
-  
-  .nav-link {
-    padding: 8px 12px !important;
-    font-size: 0.9rem;
-  }
-  
-  /* Esconde scrollbar mas mantém funcional */
-  .nav::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+   <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home"><i class="fa-solid fa-gear fa-spin"></i> OFICINA <span style="background:linear-gradient(145deg,#ffb347,#ff6a00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Otorres</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#atendimento">Atendimento</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     
   </style>
