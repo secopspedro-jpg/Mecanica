@@ -572,32 +572,82 @@
       }
     }
 
+
+
+
+   /* Menu responsivo - não desce, vira scroll horizontal */
+@media (max-width: 992px) {
+  .nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    max-width: calc(100vw - 150px);
+    padding-bottom: 5px;
+  }
+  
+  .nav-item {
+    display: inline-block !important;
+    float: none;
+  }
+  
+  .nav-link {
+    padding: 8px 12px !important;
+    font-size: 0.9rem;
+  }
+  
+  /* Esconde scrollbar mas mantém funcional */
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     
   </style>
 </head>
 <body>
           
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#home"><i class="fa-solid fa-gear fa-spin"></i> OFICINA <span style="background:linear-gradient(145deg,#ffb347,#ff6a00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Otorres</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#atendimento">Atendimento</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-          <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-        </ul>
-      </div>
+  <!-- Navbar CORRIGIDA - SEMPRE NO CANTO -->
+<nav class="navbar navbar-dark fixed-top" style="background: rgba(5, 5, 10, 0.98); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(255, 123, 0, 0.4); padding: 8px 0;">
+  <div class="container-fluid px-4">
+    <!-- Logo esquerda -->
+    <a class="navbar-brand" href="#home" style="font-size: 1.8rem; font-weight: 900; background: linear-gradient(135deg, #fff 30%, #ffb347 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+      <i class="fa-solid fa-gear fa-spin" style="color: #ff7b00; -webkit-text-fill-color: initial;"></i> OFICINA <span style="color: #ff7b00; -webkit-text-fill-color: initial;">OTORRES</span>
+    </a>
+
+    <!-- Menu no CANTO DIREITO (sempre visível) -->
+    <div class="d-flex">
+      <ul class="nav" style="gap: 5px;">
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#home" style="font-weight: 500;">Início</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#sobre" style="font-weight: 500;">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#atendimento" style="font-weight: 500;">Atendimento</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#servicos" style="font-weight: 500;">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#galeria" style="font-weight: 500;">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#depoimentos" style="font-weight: 500;">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#faq" style="font-weight: 500;">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link text-white px-3" href="#contato" style="font-weight: 500;">Contato</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
@@ -957,3 +1007,4 @@ form.addEventListener("submit", function(e) {
 
 </body>
 </html>
+
